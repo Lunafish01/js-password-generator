@@ -1,15 +1,13 @@
 // Assignment Code
+// declared empty random passowrd array
 var generateBtn = document.querySelector("#generate");
+var randomPassword = []
 
-//TODO wrtie function for variable 'generatePassword' that meets acceptance criteria
-//TODO make sure you have variables to store users answers
-//TODO prompt user for pw length
-//TODO verify that length entered is between 8 and 128 characters
-      //-if not, keep prompting until they enter a valid length
-      //- ask user if they want to include:
-      //Capital letters?
-      //Lowercase letters?
-      //keep track of answers in variables
+//declared character variables 
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var specialChar = ["!","@","#","$","%","^","&","*","(",")",];
+var number = ["0","1","2","3","4","5","6","7","8","9",];
 
 // Write password to the #password input
 function writePassword() {
@@ -22,3 +20,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
