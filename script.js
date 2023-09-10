@@ -18,6 +18,12 @@ function writePassword() {
 
 }
 
+
+function generatePassword() {
+  console.log("Hey! You clicked the button!")
+}
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
