@@ -60,7 +60,7 @@ function userPrompt() {
 function generatePassword() {
   //use correct prompt criteria to generate randomPassword
   var newPassword = " ";
-  //for loop to start generating random Math method to call random values from variable arrays
+  //for loop to start generating random values 
   for(var i = 0; i < characterLength; i++) {
     var randomValue = Math.floor(Math.random() * randomPassword.length); 
   newPassword = newPassword + randomPassword[randomValue];
