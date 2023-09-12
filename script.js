@@ -1,10 +1,8 @@
   // Assignment Code
 var generateBtn = document.querySelector("#generate");
-  // declared empty random passowrd array
+  // declared empty random passowrd array and character arrays
 var randomPassword = []
 var characterLength = 8
-
-  //declared character variables 
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",];
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var specialChar = ["!","@","#","$","%","^","&","*","(",")",];
@@ -35,16 +33,16 @@ function userPrompt() {
 
   // 2. Validate user input 
   //validating the character length and value of the user password input to make sure they enter allowed length and value type
-  //validating user enters number and not a string
+  //validating user entered number and not a string
   if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
-    alert("Character lenght must be a number between 8 - 128 digits.");
+    alert("Character length must be a number between 8 - 128 digits.");
     return false;
   }
   //if true, prompt user for characters to include in password
-  if (confirm("Do you want to include uppercase letters in your password?")) {
+  if (confirm("Do you want to include upper case letters in your password?")) {
     randomPassword = randomPassword.concat(upperCase);
   }
-  if (confirm("Do you want to include lowerCase letters in your password?")) {
+  if (confirm("Do you want to include lower case letters in your password?")) {
     randomPassword = randomPassword.concat(lowerCase);
   }
   if (confirm("Do you want to include special characters in your password?")) {
@@ -55,11 +53,10 @@ function userPrompt() {
   }
   return true;
 }
-
   // 3. Generate random password
 function generatePassword() {
   //use correct prompt criteria to generate randomPassword
-  var newPassword = " ";
+  var newPassword = "";
   //for loop to start generating random values 
   for(var i = 0; i < characterLength; i++) {
     var randomValue = Math.floor(Math.random() * randomPassword.length); 
@@ -67,7 +64,6 @@ function generatePassword() {
   }
   return newPassword;
 }  
-  
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
