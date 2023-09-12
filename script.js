@@ -26,14 +26,13 @@ if (correctPrompt)
   //    d. Numbers
   //    e. Special Characters
   //prompt the user for password criteria. Asking for password length and what kind of characters they want to include 
-function userPrompt() {
-  randomPassword = []
-
-  characterLength = parseInt(prompt("How long do you want your password to be? between 8 - 128 characters."));
-
+ function userPrompt() {
   // 2. Validate user input 
-  //validating the character length and value of the user password input to make sure they enter allowed length and value type
-  //validating user entered number and not a string
+  //validating user entered the allowed character length  
+  //validating user entered a number and not a string, 
+  randomPassword = []
+  characterLength = (prompt("How long do you want your password to be? must be between 8 - 128 characters."));
+
   if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
     alert("Character length must be a number between 8 - 128 digits.");
     return false;
@@ -52,12 +51,13 @@ function userPrompt() {
     randomPassword = randomPassword.concat(numbers);
   }
   return true;
-}
+  }
   // 3. Generate random password
-function generatePassword() {
+ function generatePassword() {
   //use correct prompt criteria to generate randomPassword
+  //loop to generate random character values for given password length
   var newPassword = "";
-  //for loop to start generating random values 
+
   for(var i = 0; i < characterLength; i++) {
     var randomValue = Math.floor(Math.random() * randomPassword.length); 
   newPassword = newPassword + randomPassword[randomValue];
