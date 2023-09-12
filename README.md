@@ -32,4 +32,8 @@
 
 ## Link to deployed application
 
+[Password Generator Link](https://lunafish01.github.io/js-password-generator/)
+
 ## Screenshot
+
+![Alt text](<Screenshot 2023-09-11 at 11.47.51 PM.png>)
